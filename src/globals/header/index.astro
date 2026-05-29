@@ -1,0 +1,99 @@
+---
+import { navigation } from "@/data/navigation";
+const { name } = Astro.props;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 backdrop-blur-md bg-gradient-to-r from-black/70 via-black/80 to-black/70 border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 md:h-20">
+            <button class="flex items-center gap-3 text-left">
+                <div class="relative">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl"
+                        style="box-shadow: rgba(118, 226, 234, 0.5) 0px 0px 20px;"
+                    >
+                    </div>
+                    <div class="absolute inset-0 w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl animate-pulse opacity-50"></div>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 420 400"
+                        fill="#FFFFFF"
+                        class="absolute inset-0 m-auto"
+                    >
+                        <g id="Group 5">
+                            <path d="M420 400L274.787 338.298L154.149 102.128L207.766 0L420 400Z"></path>
+                            <path d="M0 400L75.9573 253.191H187.659L142.978 342.553L0 400Z"></path>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="flex flex-col">
+                    <span class="text-xl md:text-2xl font-mono font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent animate-gradient-x">{name}</span>
+                </div>
+            </button>
+
+            <nav class="flex items-center gap-2">
+                {
+                    navigation.map((item) => (
+                        <a
+                            href={item.href}
+                            aria-label={item.label}
+                            class="relative px-4 py-3 text-sm font-mono font-semibold transition-all duration-300 group text-gray-300 hover:text-cyan-400"
+                        >
+                            <div class="flex items-center lg:gap-2 relative z-10">
+                                <span set:html={item.icon} />
+                                <span class="hidden md:block">{item.text}</span>
+                            </div>
+
+                            <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-300 via-rose-200 to-cyan-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                            <div class="absolute inset-0 rounded-lg bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                            <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 active-line transition-[opacity,transform] duration-300" />
+                        </a>
+                    ))
+                }
+            </nav>
+        </div>
+    </div>
+</header>
+<script is:inline>
+    window.onload = () => {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("header nav a");
+
+        const setActive = (id) => {
+            navLinks.forEach((link) => {
+                const isActive = link.getAttribute("href") === `#${id}`;
+                const line = link.querySelector(".active-line");
+
+                if (!line) return;
+
+                line.classList.toggle("opacity-0", !isActive);
+                line.classList.toggle("opacity-100", isActive);
+
+                line.classList.toggle("scale-x-0", !isActive);
+                line.classList.toggle("scale-x-100", isActive);
+            });
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActive(entry.target.id);
+                    }
+                });
+            },
+            {
+                root: null,
+                threshold: 0,
+                rootMargin: "-45% 0px -45% 0px",
+            },
+        );
+
+        sections.forEach((section) => observer.observe(section));
+    };
+</script>
