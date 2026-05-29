@@ -1,5 +1,5 @@
 ---
-import { skills } from "@/data/skills";
+import { skills, extraSkills } from "@/data/skills";
 import { iconMap } from "@/assets/icons/iconMap";
 import { MainTitle } from "@/components";
 ---
@@ -76,10 +76,7 @@ import { MainTitle } from "@/components";
             <h3 class="text-2xl font-semibold text-white mb-8">Aanvullende technologieën &amp; hulpmiddelen</h3>
 
             <div class="flex flex-wrap justify-center gap-4">
-                <span class="px-4 py-2 bg-black/30 border border-gray-700 text-gray-300 rounded-lg text-sm font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200 cursor-default">HTML5</span>
-                <span class="px-4 py-2 bg-black/30 border border-gray-700 text-gray-300 rounded-lg text-sm font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200 cursor-default">CSS3</span>
-                <span class="px-4 py-2 bg-black/30 border border-gray-700 text-gray-300 rounded-lg text-sm font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200 cursor-default">Figma</span>
-                <span class="px-4 py-2 bg-black/30 border border-gray-700 text-gray-300 rounded-lg text-sm font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200 cursor-default">VS Code</span>
+                {extraSkills.map((skill) => <span class="px-4 py-2 bg-black/30 border border-gray-700 text-gray-300 rounded-lg text-sm font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200 cursor-default">{skill}</span>)}
             </div>
         </div>
     </div>
