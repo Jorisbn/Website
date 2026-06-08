@@ -135,4 +135,4 @@ export const skills: skillList = {
     },
 };
 
-export const extraSkills: string[] = ['HTML5', 'CSS3', 'Figma', 'VS Code', 'AWS SMTP'];
+export const extraSkills: string[] = ["HTML5", "CSS3", "Figma", "VS Code", "Coolify", "AWS SMTP"];

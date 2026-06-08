@@ -18,7 +18,7 @@ export const Projects: projectList = {
         image: "flipmerktop.webp",
         status: "live",
         role: "full-stack",
-        stack: ["NextJS", "Typescript", "SASS", "PayloadCMS", "MongoDB"],
+        stack: ["NextJS", "Typescript", "SASS", "PayloadCMS", "MongoDB", "React"],
         website: "https://flipmerktop.nl/",
     },
 
@@ -40,16 +40,6 @@ export const Projects: projectList = {
         role: "full-stack",
         stack: ["NextJS", "React", "RESTAPI", "Typescript", "PostgreSQL"],
         website: "https://www.eigenkado.nl/nl",
-    },
-
-    senbis: {
-        title: "Senbis Group",
-        description: "Wordpress website voor Senbis group met custom post sorting functions voor R&D en Compounds",
-        image: "senbis.webp",
-        status: "live",
-        role: "full-stack",
-        stack: ["Wordpress", "PHP", "Javascript", "HTML", "SASS"],
-        website: "https://senbis.com",
     },
 
     loeihard: {
@@ -80,5 +70,15 @@ export const Projects: projectList = {
         role: "full-stack",
         stack: ["NextJS", "Typescript", "SASS", "PayloadCMS", "MongoDB"],
         website: "",
+    },
+
+    senbis: {
+        title: "Senbis Group",
+        description: "Wordpress website voor Senbis group met custom post sorting functions voor R&D en Compounds",
+        image: "senbis.webp",
+        status: "live",
+        role: "full-stack",
+        stack: ["Wordpress", "PHP", "Javascript", "HTML", "SASS"],
+        website: "https://senbis.com",
     },
 };
