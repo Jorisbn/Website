@@ -46,7 +46,8 @@ import Image from "astro/components/Image.astro";
                                 <p class="text-gray-400 text-sm mb-4 line-clamp-3">{project.description}</p>
 
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    {project.stack.forEach((item) => (
+                                    
+                                    {project.stack.map((item) => (
                                         <span class="px-2 py-1 bg-gray-800 text-cyan-400 text-xs rounded font-mono">{item}</span>
                                     ))}
                                 </div>
