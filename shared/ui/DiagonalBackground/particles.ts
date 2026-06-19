@@ -1,0 +1,17 @@
+export const particles = [
+    { left: "20%", top: "15%", delay: "0.5s", duration: "4s" },
+    { left: "45%", top: "25%", delay: "1.2s", duration: "3.5s" },
+    { left: "70%", top: "40%", delay: "0.8s", duration: "5s" },
+    { left: "15%", top: "60%", delay: "2s", duration: "3.8s" },
+    { left: "85%", top: "30%", delay: "0.3s", duration: "4.5s" },
+    { left: "60%", top: "75%", delay: "1.8s", duration: "3.2s" },
+    { left: "35%", top: "50%", delay: "1s", duration: "4.2s" },
+    { left: "90%", top: "65%", delay: "0.7s", duration: "3.7s" },
+    { left: "25%", top: "80%", delay: "1.5s", duration: "4.8s" },
+    { left: "75%", top: "20%", delay: "0.4s", duration: "3.9s" },
+    { left: "50%", top: "35%", delay: "2.2s", duration: "4.1s" },
+    { left: "10%", top: "45%", delay: "1.3s", duration: "3.6s" },
+    { left: "80%", top: "55%", delay: "0.9s", duration: "4.3s" },
+    { left: "40%", top: "70%", delay: "1.7s", duration: "3.4s" },
+    { left: "65%", top: "10%", delay: "0.6s", duration: "4.7s" },
+];
