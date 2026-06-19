@@ -6,7 +6,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="bg-black/30 border border-cyan-500/20 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group">
             <div className="relative overflow-hidden">
                 <Image
-                    src={`/images/${project.image}`}
+                    src={`/Website/images/${project.image}`}
                     alt="Project Homepagina"
                     width={400}
                     height={200}
