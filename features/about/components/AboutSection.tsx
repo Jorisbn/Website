@@ -156,7 +156,7 @@ export function AboutSection() {
                                             </div>
 
                                             <div className="flex-1 min-w-0">
-                                                <h4 className="text-sm lg:text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">FULL-STACK APPLICATIONS</h4>
+                                                <h4 className="text-sm lg:text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">FULL-STACK APPLICATIES</h4>
 
                                                 <p className="text-gray-400 text-xs lg:text-sm leading-relaxed">Ontwikkeling van complete webapplicaties met moderne frontend- en backendtechnologieën.</p>
                                             </div>

@@ -14,10 +14,10 @@ export function HeroSection() {
 
                             <div className="mb-8">
                                 <p className="text-2xl md:text-3xl text-gray-300 mb-4">
-                                    Ik ben een <span className="text-cyan-400 font-semibold">Full-stack Developer</span>
+                                    Ik ben een <span className="text-cyan-400 font-semibold">Software Developer</span>
                                 </p>
 
-                                <p className="text-lg text-gray-400 max-w-2xl">Full-stack developer met focus op moderne websites en webapplicaties gebouwd met React, Next.js, Typescript, MongoDB en PostgreSQL.</p>
+                                <p className="text-lg text-gray-400 max-w-2xl">Software developer met focus op moderne websites en applicaties gebouwd met React, Next.js, Typescript, MongoDB en PostgreSQL.</p>
                             </div>
 
                             <div className="flex flex-col sm:flex-row justify-start sm:justify-center gap-4 mb-12">

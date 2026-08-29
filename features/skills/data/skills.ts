@@ -105,6 +105,9 @@ export const skills: skillList = {
                 name: "MongoDB",
                 icon: "/Website/icons/mongodb-icon.svg",
             },
+            {
+                name: "SQLite",
+            },
         ],
     },
 
